@@ -73,7 +73,7 @@ const ModalForm = ({ open, handleClose, addUser, editUser, isEditing, currentUse
     } else {
       formik.resetForm();
     }
-  }, [isEditing, currentUser]);
+  }, [isEditing, currentUser, formik]);
 
   const isValidEmail = (email) => validator.isEmail(email);
   const isValidPhone = (phone) => validator.isMobilePhone(phone, 'any', { strictMode: false });
